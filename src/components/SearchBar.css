@@ -1,0 +1,32 @@
+.form-content {
+    font-family: 'Itim', cursive;
+}
+
+.input-container { 
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.search-bar {
+    border: 1px solid rgb(210, 224, 228);
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Add this line */
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.search-bar label {
+    margin-right: 3px;
+    margin-bottom: 3px; /* Add this line */
+}

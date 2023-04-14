@@ -1,0 +1,24 @@
+.header-title {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    align-items: center;
+    margin: 0 !important;
+    background-image: linear-gradient(to bottom, #7c939d, #ffffff);
+    font-family: 'Itim', cursive;
+    color: #ecf6fd;
+    font-size: x-large;
+}
+
+.header-title p {
+    color: #6e7d84;
+}
+
+.header-title h1 {
+    margin: 0;
+}
+
+body {
+    margin: auto;
+    padding: auto;
+}
