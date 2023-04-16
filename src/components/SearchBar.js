@@ -23,7 +23,7 @@ function SearchBar({ onSubmit }) {
                         <input value={term} onChange={handleChange} />
                         <button type="submit">🔍</button> 
                     </div>
-                </div> {/* Add this line */}
+                </div> 
            </form>
        </div>
     );
