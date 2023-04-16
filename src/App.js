@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import ImageList from './components/ImageList';
@@ -10,31 +10,18 @@ function App() {
     const [term, setTerm] = useState('');
     const [page, setPage] = useState(1);
 
-    useEffect(() => {
-        // do nothing
-      }, [page])
-
-    const imageAPI = async () => {
-        console.log('page =', page);
-        const result = await searchImages(term, page);
-        return result;
-    };
-
     const handleSubmit = async (term) => {
         setPage(1);
+        const result = await searchImages(term, 1);
+        setImages(result);
         setTerm(term);
-        const returnedValue = await imageAPI();
-        setImages(returnedValue);
     };
 
     const handleLoadMore = async () => {
         const newPage = page + 1;
-        console.log('newPage =', newPage);
+        const result = await searchImages(term, newPage);
+        setImages((prevImages) => [...prevImages, ...result]);
         setPage(newPage);
-        const returnedValue = await imageAPI();
-        console.log(returnedValue);
-        setImages((prevImages) => [...prevImages, ...returnedValue]);
-        console.log('after API call, page =', page);
     };
 
     return (
